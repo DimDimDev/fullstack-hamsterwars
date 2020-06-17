@@ -33,7 +33,7 @@ const HamsterCard = ({ hamster, postResult }) => {
                     <CardActionArea>
                         <CardMedia
                             className={classes.media}
-                            image={`http://localhost:3000/assets/${hamster.imgName}`}
+                            image={`http://localhost:2048/assets/${hamster.imgName}`}
                             title="Contemplative Reptile"
                         />
                         <CardContent>

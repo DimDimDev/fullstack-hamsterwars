@@ -97,5 +97,29 @@ router.post('/', async (req, res) => {
     }
 })
 
+// router.post('/', async (req, res) => {
+//     try {
+//         let winnerResults = {
+//             wins: req.body.winner.wins + req.body.wins,
+//             defeats: req.body.winner.defeats + req.body.defeats,
+//             games: req.body.winner.games + req.body.games
+//         }
+//         let match = {
+//             timeStamp: new Date().toLocaleString(),
+//             contestantOne: req.body.contestantOne,
+//             contestantTwo: req.body.contestantTwo,
+//             winner: req.body.winner,
+//             winnerResults: winnerResults
+//         }
+
+
+//         await db.collection('games').doc().set(match);
+//         res.status(200).send("New match added to games")
+
+//     } catch (err) {
+//         res.status(500)
+//         console.error(err)
+//     }
+// })
 
 module.exports = router;

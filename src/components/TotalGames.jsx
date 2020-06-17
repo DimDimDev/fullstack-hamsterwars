@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 const TotalGames = () => {
-    const url = 'http://localhost:3000/stats/total';
+    const url = 'api/stats/total';
     const [data, setData] = useState(null);
 
     useEffect(() => {

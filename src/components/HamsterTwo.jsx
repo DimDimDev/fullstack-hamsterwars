@@ -6,14 +6,16 @@ import HamsterCard from './HamsterCard'
 
 const HamsterTwo = ({ hamster2, setHamster2, postResult }) => {
     const { id2 } = useParams();
-    const paramsUrl = 'http://localhost:3000/hamsters/' + id2;
-    const randomUrl = 'http://localhost:3000/hamsters/random';
+    const paramsUrl = `api/hamsters/${id2}`
+    const randomUrl = 'api/hamsters/random';
 
     useEffect(() => {
         async function fetchData() {
             const response = await fetch(id2 ? paramsUrl : randomUrl);
             const json = await response.json();
             setHamster2(json);
+            console.log(json)
+            console.log(id2)
         }
 
         fetchData();

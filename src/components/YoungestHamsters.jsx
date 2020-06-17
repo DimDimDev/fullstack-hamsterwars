@@ -15,7 +15,7 @@ const useStyles = makeStyles({
 });
 
 const YoungestHamsters = () => {
-    const url = 'http://localhost:3000/stats/youngest';
+    const url = 'api/stats/youngest';
     const [data, setData] = useState(null);
 
     const classes = useStyles();

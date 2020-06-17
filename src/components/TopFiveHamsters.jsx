@@ -15,7 +15,7 @@ const useStyles = makeStyles({
 });
 
 const TopFiveHamsters = () => {
-    const url = 'http://localhost:3000/charts/top';
+    const url = 'api/charts/top';
     const [data, setData] = useState(null);
 
     const classes = useStyles();

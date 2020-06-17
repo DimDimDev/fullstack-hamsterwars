@@ -6,6 +6,7 @@ const serverPort = process.env.PORT || 2048;
 app.use(cors());
 app.use(express.json());
 
+
 //Static route to assets
 app.use(express.static(__dirname + '/../build'));
 app.use('/', express.static('public'))

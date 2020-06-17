@@ -7,6 +7,7 @@ import LatestGames from './components/LatestGames';
 import SpecificGame from './components/SpecificGame';
 import TotalGames from './components/TotalGames';
 import LastGame from './components/LastGame';
+import Start from './components/Start';
 
 function App() {
   const [hamster1, setHamster1] = useState(null)
@@ -25,7 +26,6 @@ function App() {
         <Route path="/stats">
           <div className="App">
             <main>
-              <h1>Statistik</h1>
               <TotalGames />
               <Stats className="Games" />
             </main>
@@ -40,7 +40,7 @@ function App() {
             <SpecificGame className="Games" />
           </div>
         </Route>
-        <Route path="/matchup/lastgame">
+        <Route path="/lastgame">
           <div className="App">
             <main>
               <h1>Senaste matchen</h1>
@@ -50,9 +50,6 @@ function App() {
         </Route>
         <Route path="/matchup">
           <div className="App">
-            <header>
-              <h1>Matchsida</h1>
-            </header>
             <TotalGames />
             <LatestGames className="Games" />
           </div>
@@ -78,26 +75,12 @@ function App() {
           </div>
         </Route>
         <Route path="/">
-          <div className="App">
-            <header>
-              <h1>Startsida</h1>
-            </header>
-            <main >
-              <section>
-                <h1> välkommen till hamsterwars</h1>
-                <button>get started</button>
-              </section>
-              <section>
-                <h2>Statistics</h2>
-                <TotalGames />
-                <div>
-                  <h3>Latest Games</h3>
-                  <LatestGames />
-                  <h3>More statistics</h3>
-                  <Stats />
-                </div>
-              </section>
-            </main>
+          <div className="Start">
+            <div className="StartContainer">
+              <main >
+                <Start />
+              </main>
+            </div>
           </div>
         </Route>
       </Switch>

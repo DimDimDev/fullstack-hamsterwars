@@ -15,7 +15,7 @@ const useStyles = makeStyles({
 });
 
 const OldestHamsters = () => {
-    const url = 'http://localhost:3000/stats/oldest';
+    const url = 'api/stats/oldest';
     const [data, setData] = useState(null);
 
     const classes = useStyles();

@@ -20,7 +20,7 @@ const useStyles = makeStyles({
 });
 
 const LatestGame = () => {
-    const url = 'http://localhost:3000/games/latest';
+    const url = 'api/games/latest';
     const [data, setData] = useState(null);
 
     const classes = useStyles();
