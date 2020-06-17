@@ -1,0 +1,32 @@
+import React, { useEffect } from 'react';
+import { useParams } from 'react-router-dom'
+import './Components.css'
+import HamsterCard from './HamsterCard'
+
+
+const HamsterTwo = ({ hamster2, setHamster2, postResult }) => {
+    const { id2 } = useParams();
+    const paramsUrl = 'http://localhost:3000/hamsters/' + id2;
+    const randomUrl = 'http://localhost:3000/hamsters/random';
+
+    useEffect(() => {
+        async function fetchData() {
+            const response = await fetch(id2 ? paramsUrl : randomUrl);
+            const json = await response.json();
+            setHamster2(json);
+        }
+
+        fetchData();
+    }, [id2, paramsUrl, randomUrl, setHamster2])
+
+    return (
+        <div>{hamster2 ?
+            <div>
+                {/* <h2>{hamster2.name}</h2> */}
+                <HamsterCard hamster={hamster2} postResult={postResult} />
+            </div> : 'nodata'}
+        </div>
+    )
+}
+
+export default HamsterTwo;

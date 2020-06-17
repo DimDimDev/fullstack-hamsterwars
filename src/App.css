@@ -1,13 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
 .App {
+  color: black;
   text-align: center;
+  background-color: rgba(230, 230, 250,0.5);
+  /* background-image: url("https://image.freepik.com/free-vector/cute-cartoon-hamsters-collection-set_29190-1511.jpg"); */
+  /* height: auto; */
+  overflow: hidden;
 }
 
-.App-header {
-  background-color: #282c34;
+.App main {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  flex: 1;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  margin: 5em;
+  margin-top: 0em;
+}
+
+.App header{
+  font-size: 1.5em;
+  padding: 1em;
+}
+
+/* .App >main {
+border: 1px black solid;
+margin-top: 5em;
+} */
+
+.App h1 {
+font-size: 2.5em;
+text-align: center;
+font-family: 'Indie Flower', cursive;
+}
+
+.App h2 {
+text-align: center;
+}
+
+.stats {
+  background-color: aqua;
+}
+
+.stats {
+  background-color: aqua;
+}
+
+.Navbar {
+  text-align: center;
+  font-size: 2em;
+  padding: 0.5em;
+  background-color: rgb(230, 230, 250);
+  font-family: 'Indie Flower', cursive;
+  text-decoration: none;
+  border-bottom: 0.1em dashed black;
+}
+
+.Navbar a{
+  text-decoration: none;
+  color: black;
+  padding: 0.5em;
 }

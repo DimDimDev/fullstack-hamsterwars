@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
+.cardname {
+     font-family: 'Indie Flower', cursive;
+}
+
+.statsContainer {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    justify-content: space-around;
+    align-items: left;
+    text-align: start;
+    font-size: 1.2em;
+    border: 0.1em solid gray;
+    margin-top: 1em;
+    border-radius: 2%;
+    
+}
+
+.SpecificGame {
+    background-color: rosybrown;
+}
+
+.specificHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+section {
+    border: 0.2em black solid;
+    margin-bottom: 5em;
+    padding: 5em;
+}
+
+.Battle{
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 5em;
+  margin-top: 0em;
+    /* background-image: url("https://image.freepik.com/free-vector/cute-cartoon-hamsters-collection-set_29190-1511.jpg"); */
+  /* background-color: rgba(230, 230, 250, 0.9); */
+  border-radius: 1%;
+  padding: 2em;
+  padding-top: 5em;
+}
+
+.LatestGame{
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  margin: 5em;
+  margin-top: 0em;
+  /* background-color: white; */
+  border-radius: 1%;
+  padding: 10em;
+}
+
+.LastGame{
+  justify-content: center;
+  align-items: center;
+  /* margin: 5em;
+  margin-top: 0em; */
+  /* background-color: rgba(230, 230, 250, 0.9);
+  border-radius: 1%;
+  padding: 2em;
+  padding-top: 5em; */
+}
+
+.Stats{
+  justify-content: center;
+  align-items: center;
+  margin: 5em;
+  margin-top: 0em;
+  background-color: lavender;
+  border-radius: 1%;
+  padding: 2em;
+}
+
+.stats label {
+    font-family: 'Indie Flower', cursive;
+}
+
+.StatsBar {
+    /* border: 1px solid black; */
+    border-radius: 1em;
+}
