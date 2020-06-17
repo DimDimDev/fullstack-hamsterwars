@@ -5,7 +5,7 @@ import './Components.css'
 
 const SpecificGame = () => {
     const { id1, id2 } = useParams();
-    const url = 'http://localhost:2048/games/' + id1 + '/' + id2;
+    const url = '/api/games/' + id1 + '/' + id2
     const [contestantOne, setContestantOne] = useState(null);
     const [contestantTwo, setContestantTwo] = useState(null);
     const [matchWinner, setMatchWinner] = useState(null);
@@ -22,6 +22,7 @@ const SpecificGame = () => {
         }
         fetchData();
     }, [url])
+
     return (
         <div className="markering">
             <div>{timeStamp ?

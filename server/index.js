@@ -3,6 +3,7 @@ const app = express();
 const cors = require('cors');
 const serverPort = process.env.PORT || 2048;
 
+
 app.use(cors());
 app.use(express.json());
 
@@ -10,7 +11,7 @@ app.use(express.json());
 //Static route to assets
 app.use(express.static(__dirname + '/../build'));
 app.use('/', express.static('public'))
-app.use('/assets', express.static('assets'))
+app.use('/api/assets', express.static('assets'))
 
 //Routes imports
 const hamstersRoute = require('./routes/hamsters');

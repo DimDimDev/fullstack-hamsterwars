@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import HamsterCardDisplayOnly from './HamsterCardDisplayOnly'
 import './Components.css'
+import Button from '@material-ui/core/Button';
 
 const LastGame = () => {
-    const url = 'api/games/last';
+    const url = '/api/games/last';
     const [contestantOne, setContestantOne] = useState(null);
     const [contestantTwo, setContestantTwo] = useState(null);
     const [matchWinner, setMatchWinner] = useState(null);
@@ -19,24 +20,23 @@ const LastGame = () => {
             setContestantTwo(json[0].contestantTwo)
             setTimeStamp(json[0].timeStamp)
             setGames(json[0].winner.games)
-            console.log('Lastgame')
-            console.log(games)
         }
         fetchData();
     }, [url, games])
     return (
         <div className="LastGame">
-            <div>{timeStamp && contestantOne && contestantTwo ?
-                <div>{timeStamp} - {contestantOne.name} vs {contestantTwo.name} - Winner</div> : 'no data'}
+            <div>
+                <h2>Latest Game</h2>{timeStamp && contestantOne && contestantTwo ?
+                    <div>{timeStamp} - {contestantOne.name} vs {contestantTwo.name} - Winner</div> : 'no data'}
             </div>
-            {/* <header className="specificHeader">
-            </header > */}
+            <header className="specificHeader">
+            </header >
             <div>
                 {/* <p>Winner!</p> */}
                 <div> {matchWinner ? <HamsterCardDisplayOnly hamster={matchWinner} /> : 'nodata'}
                 </div>
                 <a href="/battle">
-                    <button> New battle!</button>
+                    <Button color="primary" variant="contained">New Battle!</Button>
                 </a>
             </div>
         </div >

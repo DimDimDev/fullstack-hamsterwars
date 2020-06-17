@@ -62,7 +62,7 @@ router.put('/:id/result', async (req, res) => {
 
         })
 
-        res.status(200).send({ msg: "Result updated with", newResult: results })
+        res.status(200).send("Result updated for")
 
     } catch (err) {
         console.error(err)

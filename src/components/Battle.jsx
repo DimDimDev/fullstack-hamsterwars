@@ -8,30 +8,13 @@ import './Components.css'
 const Battle = ({ hamster1, setHamster1, hamster2, setHamster2 }) => {
     const history = useHistory();
 
-
-    // function postResult(winner, loser) {
-    //     updateWinner(winner)
-    //     updateLoser(loser)
-    //     test(winner, loser)
-    // }
-
-    // function test(winner, loser) {
-    //     updateResult(winner, loser)
-    // }
-
-
     async function postResult(winner, loser) {
         const match = {
             "contestantOne": hamster1,
             "contestantTwo": hamster2,
             "winner": winner,
-            // "winnerResults": {
-            //     "wins": +0,
-            //     "defeats": +1,
-            //     "games": +1
-            // }
         }
-        const url = 'api/games'
+        const url = '/api/games'
         const response = await fetch(url, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
@@ -39,11 +22,8 @@ const Battle = ({ hamster1, setHamster1, hamster2, setHamster2 }) => {
         })
         updateWinner(winner)
         updateLoser(loser)
-        console.log(match)
         console.log(await response.text())
-
         history.push('/lastgame')
-
     }
 
     async function updateLoser(loser) {
@@ -52,15 +32,13 @@ const Battle = ({ hamster1, setHamster1, hamster2, setHamster2 }) => {
             "defeats": +1,
             "games": +1
         }
-        const url = `api/hamsters/${loser.id}/result`
+        const url = `/api/hamsters/${loser.id}/result`
         const response = await fetch(url, {
             method: 'PUT',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(results)
         })
-        console.log(results)
-        console.log('loser', loser.id, loser.name)
-        console.log(await response.text())
+        console.log(await response.text(), 'Loser: ' + loser.name)
     }
 
     async function updateWinner(winner) {
@@ -69,15 +47,13 @@ const Battle = ({ hamster1, setHamster1, hamster2, setHamster2 }) => {
             "defeats": +0,
             "games": +1
         }
-        const url = `api/hamsters/${winner.id}/result`
+        const url = `/api/hamsters/${winner.id}/result`
         const response = await fetch(url, {
             method: 'PUT',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(results)
         })
-        console.log(results)
-        console.log('winner', winner.id, winner.name)
-        console.log(await response.text())
+        console.log(await response.text(), 'Winner: ' + winner.name)
     }
 
     return (

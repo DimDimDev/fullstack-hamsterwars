@@ -6,8 +6,8 @@ import HamsterCard from './HamsterCard'
 
 const HamsterOne = ({ hamster1, setHamster1, postResult }) => {
     const { id1 } = useParams();
-    const paramsUrl = `api/hamsters/${id1}`;
-    const randomUrl = 'api/hamsters/random';
+    const paramsUrl = '/api/hamsters/' + id1;
+    const randomUrl = '/api/hamsters/random';
 
     useEffect(() => {
         async function fetchData() {

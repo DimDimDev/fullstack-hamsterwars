@@ -18,9 +18,6 @@
     
 }
 
-.SpecificGame {
-    background-color: rosybrown;
-}
 
 .specificHeader {
     display: flex;
@@ -66,12 +63,16 @@ section {
   justify-content: center;
   align-items: center;
   /* margin: 5em;
-  margin-top: 0em; */
-  /* background-color: rgba(230, 230, 250, 0.9);
+  margin-top: 0em;
   border-radius: 1%;
   padding: 2em;
   padding-top: 5em; */
+  font-family: 'Indie Flower', cursive;
 }
+
+/* .LastGame button{
+  margin: 5em;
+} */
 
 .Stats{
   justify-content: center;

@@ -1,9 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
 
+body{
+  background-color: rgba(230, 230, 250,0.5);
+}
+
 .Start{
   background-image: url("https://image.freepik.com/free-vector/cute-cartoon-hamsters-collection-set_29190-1511.jpg");
-  overflow: auto;
-  height: 73vh;
   color: black;
   text-align: center;
   font-size: 2em;
@@ -27,9 +29,6 @@ margin-Right:5em;
   color: black;
   text-align: center;
   background-color: rgba(230, 230, 250,0.5);
-  /* background-image: url("https://image.freepik.com/free-vector/cute-cartoon-hamsters-collection-set_29190-1511.jpg"); */
-  height: 90vh;
-  overflow: hidden;
 }
 
 .App main {
@@ -46,11 +45,6 @@ margin-Right:5em;
   font-size: 1.5em;
   padding: 1em;
 }
-
-/* .App >main {
-border: 1px black solid;
-margin-top: 5em;
-} */
 
 .App h1 {
 font-size: 2.5em;

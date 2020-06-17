@@ -43,7 +43,6 @@ function App() {
         <Route path="/lastgame">
           <div className="App">
             <main>
-              <h1>Senaste matchen</h1>
               <LastGame />
             </main>
           </div>

@@ -14,7 +14,6 @@ router.get('/:id1/:id2', async (req, res) => {
         gamesDB.forEach(game => {
             gamesArray.push(game.data());
         })
-
         res.status(200).send(gamesArray)
 
     } catch (err) {

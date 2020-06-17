@@ -16,7 +16,7 @@ const useStyles = makeStyles({
         maxWidth: 345,
     },
     media: {
-        height: 300,
+        height: 190,
     },
 });
 
@@ -29,12 +29,13 @@ const HamsterCard = (hamster) => {
                 <Card className={classes.root}>
                     <CardMedia
                         className={classes.media}
-                        image={`http://localhost:3000/assets/${hamster.hamster.imgName}`}
+                        image={`/api/assets/${hamster.hamster.imgName}`}
                         title="Contemplative Reptile"
                     />
                     <CardContent>
                         <Typography gutterBottom variant="h5" component="h2" align="center">
-                            {hamster.hamster.name}
+                            <h2 className="cardname">
+                                {hamster.hamster.name}</h2>
                         </Typography>
                         <Typography variant="body2" color="textSecondary" component="p">
                             Loves: {hamster.hamster.loves}
@@ -48,11 +49,6 @@ const HamsterCard = (hamster) => {
                             <div><p>Defeats: {hamster.hamster.defeats}</p></div>
                         </Container>
                     </CardContent>
-                    {/* <CardActions>
-                                <Button size="small" color="primary" align="centre">
-                                    Share
-        </Button>
-                            </CardActions> */}
                 </Card>
             </main>
         </div>
