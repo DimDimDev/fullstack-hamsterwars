@@ -36,7 +36,7 @@ const HamsterCard = ({ hamster, postResult }) => {
                             image={`/api/assets/${hamster.imgName}`}
                             title="Contemplative Reptile"
                         />
-                        <CardContent>
+                        <CardContent className="test">
                             <Typography gutterBottom variant="h5" component="h2" align="center">
                                 <h2 className="cardname">{hamster.name}</h2>
                             </Typography>

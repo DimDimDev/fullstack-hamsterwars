@@ -37,12 +37,12 @@ const HamsterCard = (hamster) => {
                             <h2 className="cardname">
                                 {hamster.hamster.name}</h2>
                         </Typography>
-                        <Typography variant="body2" color="textSecondary" component="p">
+                        {/* <Typography variant="body2" color="textSecondary" component="p">
                             Loves: {hamster.hamster.loves}
                         </Typography>
                         <Typography variant="body2" color="textSecondary" component="p" align="left">
                             Favorite food: {hamster.hamster.food}
-                        </Typography>
+                        </Typography> */}
                         <Container className="statsContainer">
                             <div><p>Games: {hamster.hamster.games}</p></div>
                             <div><p>Wins: {hamster.hamster.wins}</p></div>

@@ -75,6 +75,10 @@ export default function FloatingActionButtonZoom() {
     return (
         <main className="Stats">
             <div >
+                <header>
+                    <h1>Statistics</h1>
+                    <p>Want to know more about the little fellas?</p>
+                </header>
                 <AppBar className="StatsBar" position="static" color="white">
                     <Tabs
                         value={value}

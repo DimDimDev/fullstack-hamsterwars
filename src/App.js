@@ -26,7 +26,6 @@ function App() {
         <Route path="/stats">
           <div className="App">
             <main>
-              <TotalGames />
               <Stats className="Games" />
             </main>
           </div>
@@ -34,8 +33,8 @@ function App() {
         <Route path="/matchup/:id1/:id2">
           <div className="App">
             <header>
-              <h1>Matchsida</h1>
-              <p>Se resultatet av en specifik matchup.</p>
+              {/* <h1>Matchsida</h1>
+              <p>Se resultatet av en specifik matchup.</p> */}
             </header>
             <SpecificGame className="Games" />
           </div>
@@ -49,14 +48,13 @@ function App() {
         </Route>
         <Route path="/matchup">
           <div className="App">
-            <TotalGames />
             <LatestGames className="Games" />
           </div>
         </Route>
         <Route path="/battle/:id1/:id2">
           <div className="App">
             <main>
-              <h1>Battlesida</h1>
+              {/* <h1>Battlesida</h1> */}
               <Battle
                 hamster1={hamster1} setHamster1={setHamster1}
                 hamster2={hamster2} setHamster2={setHamster2} />
@@ -66,7 +64,7 @@ function App() {
         <Route path="/battle">
           <div className="App">
             <main>
-              <h1>Battlesida</h1>
+              {/* <h1>Battlesida</h1> */}
               <Battle
                 hamster1={hamster1} setHamster1={setHamster1}
                 hamster2={hamster2} setHamster2={setHamster2} />

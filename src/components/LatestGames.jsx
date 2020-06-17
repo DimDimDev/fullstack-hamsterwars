@@ -8,6 +8,7 @@ import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 import './Components.css'
+import TotalGames from './TotalGames'
 
 const useStyles = makeStyles({
     root: {
@@ -36,6 +37,7 @@ const LatestGame = () => {
 
     return (
         <div className="LatestGame"> {data ? <TableContainer component={Paper}>
+            <TotalGames />
             <Table className={classes.table} size="small" aria-label="a dense table">
                 <TableHead>
                     <TableRow>
@@ -45,7 +47,6 @@ const LatestGame = () => {
                         <TableCell align="right">Winner</TableCell>
                     </TableRow>
                 </TableHead>
-
                 <TableBody>
                     {data.map((row) => (
                         <TableRow key={row.timeStamp}>

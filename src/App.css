@@ -1,11 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
 
 body{
-  background-color: rgba(230, 230, 250,0.5);
+  background-image: url("../src/background.jpg");
+  height: 100vh;
+  overflow: hidden;
 }
 
 .Start{
-  background-image: url("https://image.freepik.com/free-vector/cute-cartoon-hamsters-collection-set_29190-1511.jpg");
+  /* background-image: url("https://image.freepik.com/free-vector/cute-cartoon-hamsters-collection-set_29190-1511.jpg"); */
   color: black;
   text-align: center;
   font-size: 2em;
@@ -18,17 +20,18 @@ body{
 }
 
 .StartContainer{
-background-color: rgba(230, 230, 250,0.9);
-border-radius: 1%;
-overflow: hidden;
+background-color: white;
+border-radius: 1em;
+/* overflow: hidden; */
 margin-left:5em;
 margin-Right:5em;
+padding-top:1em;
 }
 
 .App {
-  color: black;
+  color: white;
   text-align: center;
-  background-color: rgba(230, 230, 250,0.5);
+  /* background-color: rgba(230, 230, 250,0.5); */
 }
 
 .App main {
@@ -61,10 +64,10 @@ text-align: center;
   text-align: center;
   font-size: 2em;
   padding: 0.5em;
-  background-color: rgb(230, 230, 250);
+  background-color: white;
   font-family: 'Indie Flower', cursive;
   text-decoration: none;
-  border-bottom: 0.1em dashed black;
+  border-bottom: 0.1em solid black;
 }
 
 .Navbar a{

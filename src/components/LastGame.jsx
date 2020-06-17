@@ -26,8 +26,8 @@ const LastGame = () => {
     return (
         <div className="LastGame">
             <div>
-                <h2>Latest Game</h2>{timeStamp && contestantOne && contestantTwo ?
-                    <div>{timeStamp} - {contestantOne.name} vs {contestantTwo.name} - Winner</div> : 'no data'}
+                {timeStamp && contestantOne && contestantTwo ?
+                    <div><p>{timeStamp} - {contestantOne.name} vs {contestantTwo.name} - Winner</p></div> : 'no data'}
             </div>
             <header className="specificHeader">
             </header >
