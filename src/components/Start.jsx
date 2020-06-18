@@ -10,8 +10,6 @@ const Start = () => {
                 Wellcome to Hamsterwars!
             </h1>
             <p>One hamster to rule them all... </p>
-            <a className="StartButton" href="/battle">New Battle!
-                </a>
         </div>
     )
 }

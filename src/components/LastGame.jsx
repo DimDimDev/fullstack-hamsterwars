@@ -33,8 +33,8 @@ const LastGame = () => {
             <div>
                 <div> {matchWinner ? <HamsterCardDisplayOnly hamster={matchWinner} /> : 'nodata'}
                 </div>
-                <a className="Button" href="/battle">New Battle!
-                </a>
+                {/* <a className="Button" href="/battle">New Battle!
+                </a> */}
             </div>
         </div >
     );

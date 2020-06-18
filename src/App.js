@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './App.css';
-import { BrowserRouter as Router, Switch, Route, NavLink } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route, NavLink, Link } from 'react-router-dom';
 import Battle from './components/Battle';
 import Stats from './components/Stats';
 import LatestGames from './components/LatestGames';
@@ -40,6 +40,7 @@ function App() {
           <div className="App">
             <main>
               <LastGame />
+              <Link className="Button" to='/battle'> New Battle! </Link>
             </main>
           </div>
         </Route>
@@ -71,6 +72,7 @@ function App() {
             <div className="StartContainer">
               <main >
                 <Start />
+                <Link className="StartButton" to='/battle'> Battle! </Link>
               </main>
             </div>
           </div>
