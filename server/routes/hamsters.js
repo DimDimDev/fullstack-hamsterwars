@@ -4,6 +4,7 @@ const { db } = require('../firebase')
 let router = new Router();
 
 
+
 //Returns all hamsters
 router.get('/', async (req, res) => {
     try {
@@ -22,6 +23,47 @@ router.get('/', async (req, res) => {
     }
 })
 
+//Create new Hamster
+router.post('/', async (req, res) => {
+    try {
+        let newHamster =
+            await db.collection('hamsters').doc().set({
+                id: req.body.id,
+                name: req.body.name,
+                age: req.body.age,
+                loves: req.body.loves,
+                favFood: req.body.favFood,
+                imgName: req.body.imgName,
+                games: 0,
+                wins: 0,
+                defeats: 0
+            })
+
+        res.status(200).send({ msg: newHamster })
+
+    } catch (err) {
+        res.status(500)
+        console.error(err)
+    }
+})
+
+//Returns hamsterlength
+// router.get('/length', async (req, res) => {
+//     try {
+//         let hamstersArray = [];
+//         let hamstersDB = await db.collection('hamsters').get();
+
+//         hamstersDB.forEach(hamster => {
+//             hamstersArray.push(hamster.data());
+//         })
+
+//         res.status(200).send(hamstersArray)
+
+//     } catch (err) {
+//         res.status(500)
+//         console.error(err)
+//     }
+// })
 
 //Returns a random hamster
 router.get('/random', async (req, res) => {

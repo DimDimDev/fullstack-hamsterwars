@@ -7,6 +7,7 @@ import LatestGames from './components/LatestGames';
 import SpecificGame from './components/SpecificGame';
 import LastGame from './components/LastGame';
 import Start from './components/Start';
+import Upload from './components/Upload';
 
 function App() {
   const [hamster1, setHamster1] = useState(null)
@@ -20,9 +21,16 @@ function App() {
         <NavLink to="/battle"> Battle </NavLink>
         <NavLink to="/matchup"> Games </NavLink>
         <NavLink to="/stats"> Stats </NavLink>
-        <NavLink to="/stats"> Upload </NavLink>
+        <NavLink to="/upload"> Upload </NavLink>
       </nav>
       <Switch>
+        <Route path="/upload">
+          <div className="App">
+            <main>
+              <Upload />
+            </main>
+          </div>
+        </Route>
         <Route path="/stats">
           <div className="App">
             <main>
