@@ -38,8 +38,8 @@ const Upload = () => {
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(newHamster)
         })
+        history.push('/stats')
         console.log(await response.text())
-        history.push('/upload')
     }
 
     return (

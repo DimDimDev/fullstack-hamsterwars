@@ -26,20 +26,20 @@ router.get('/', async (req, res) => {
 //Create new Hamster
 router.post('/', async (req, res) => {
     try {
-        let newHamster =
-            await db.collection('hamsters').doc().set({
-                id: req.body.id,
-                name: req.body.name,
-                age: req.body.age,
-                loves: req.body.loves,
-                favFood: req.body.favFood,
-                imgName: req.body.imgName,
-                games: 0,
-                wins: 0,
-                defeats: 0
-            })
+        let newHamster = {
+            id: req.body.id,
+            name: req.body.name,
+            age: req.body.age,
+            loves: req.body.loves,
+            favFood: req.body.favFood,
+            imgName: req.body.imgName,
+            games: 0,
+            wins: 0,
+            defeats: 0
+        }
+        await db.collection('hamsters').doc().set(newHamster)
 
-        res.status(200).send({ msg: newHamster })
+        res.status(200).send({ msg: "New hamster added", newHamster })
 
     } catch (err) {
         res.status(500)

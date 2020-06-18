@@ -3,7 +3,7 @@
 body{
   background-image: url("../src/background.jpg");
   height: 100vh;
-  overflow: hidden;
+  overflow: auto
 }
 
 .Start{
