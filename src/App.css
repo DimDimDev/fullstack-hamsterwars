@@ -2,7 +2,7 @@
 
 body{
   background-image: url("../src/background.jpg");
-  height: 100vh;
+  /* height: 100vh; */
   overflow: auto
 }
 
@@ -41,7 +41,7 @@ padding-bottom: 2em;
   flex: 1;
   justify-content: center;
   align-items: center;
-  margin: 5em;
+  /* margin: 5em; */
   margin-top: 2em;
 }
 
