@@ -14,6 +14,8 @@ const HamsterOne = ({ hamster1, setHamster1, postResult }) => {
             const response = await fetch(id1 ? paramsUrl : randomUrl);
             const json = await response.json();
             setHamster1(json);
+            console.log(paramsUrl)
+            console.log(randomUrl)
         }
 
         fetchData();
