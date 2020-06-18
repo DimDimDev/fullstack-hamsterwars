@@ -20,6 +20,7 @@ function App() {
         <NavLink to="/battle"> Battle </NavLink>
         <NavLink to="/matchup"> Games </NavLink>
         <NavLink to="/stats"> Stats </NavLink>
+        <NavLink to="/stats"> Upload </NavLink>
       </nav>
       <Switch>
         <Route path="/stats">
