@@ -11,7 +11,7 @@ app.use(express.json());
 //Static route to assets
 app.use(express.static(__dirname + '/../build'));
 app.use('/', express.static('public'))
-app.use('/api/assets', express.static('assets'))
+app.use('/assets', express.static(__dirname + '/assets'))
 
 //Routes imports
 const hamstersRoute = require('./routes/hamsters');

@@ -33,17 +33,17 @@ const HamsterCard = ({ hamster, postResult }) => {
                     <CardActionArea>
                         <CardMedia
                             className={classes.media}
-                            image={`/api/assets/${hamster.imgName}`}
+                            image={`/assets/${hamster.imgName}`}
                             title="Contemplative Reptile"
                         />
                         <CardContent className="test">
                             <Typography gutterBottom variant="h5" component="h2" align="center">
                                 <h2 className="cardname">{hamster.name}</h2>
                             </Typography>
-                            <Typography variant="body2" color="textSecondary" component="p">
+                            <Typography variant="body2" color="textSecondary" component="p" align="center">
                                 Loves: {hamster.loves}
                             </Typography>
-                            <Typography variant="body2" color="textSecondary" component="p" align="left">
+                            <Typography variant="body2" color="textSecondary" component="p" align="center">
                                 Favorite food: {hamster.favFood}
                             </Typography>
                         </CardContent>

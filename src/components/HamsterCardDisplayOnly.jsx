@@ -16,7 +16,7 @@ const useStyles = makeStyles({
         maxWidth: 345,
     },
     media: {
-        height: 190,
+        height: 210,
     },
 });
 
@@ -29,7 +29,7 @@ const HamsterCard = (hamster) => {
                 <Card className={classes.root}>
                     <CardMedia
                         className={classes.media}
-                        image={`/api/assets/${hamster.hamster.imgName}`}
+                        image={`/assets/${hamster.hamster.imgName}`}
                         title="Contemplative Reptile"
                     />
                     <CardContent>

@@ -5,7 +5,7 @@ import Battle from './components/Battle';
 import Stats from './components/Stats';
 import LatestGames from './components/LatestGames';
 import SpecificGame from './components/SpecificGame';
-import TotalGames from './components/TotalGames';
+// import TotalGames from './components/TotalGames';
 import LastGame from './components/LastGame';
 import Start from './components/Start';
 
