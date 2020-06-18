@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import HamsterCardDisplayOnly from './HamsterCardDisplayOnly'
 import './Components.css'
-import Button from '@material-ui/core/Button';
 
 const LastGame = () => {
     const url = '/api/games/last';
@@ -32,11 +31,9 @@ const LastGame = () => {
             <header className="specificHeader">
             </header >
             <div>
-                {/* <p>Winner!</p> */}
                 <div> {matchWinner ? <HamsterCardDisplayOnly hamster={matchWinner} /> : 'nodata'}
                 </div>
-                <a href="/battle">
-                    <Button color="primary" variant="contained">New Battle!</Button>
+                <a className="Button" href="/battle">New Battle!
                 </a>
             </div>
         </div >

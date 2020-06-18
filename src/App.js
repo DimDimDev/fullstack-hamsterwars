@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
 import './App.css';
-import { BrowserRouter as Router, Switch, Route, Link, NavLink } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route, NavLink } from 'react-router-dom';
 import Battle from './components/Battle';
 import Stats from './components/Stats';
 import LatestGames from './components/LatestGames';
 import SpecificGame from './components/SpecificGame';
-// import TotalGames from './components/TotalGames';
 import LastGame from './components/LastGame';
 import Start from './components/Start';
 
@@ -17,7 +16,7 @@ function App() {
   return (
     <Router>
       <nav className="Navbar">
-        <Link to="/"> Home </Link>
+        <NavLink to="/"> Home </NavLink>
         <NavLink to="/battle"> Battle </NavLink>
         <NavLink to="/matchup"> Games </NavLink>
         <NavLink to="/stats"> Stats </NavLink>
@@ -33,8 +32,6 @@ function App() {
         <Route path="/matchup/:id1/:id2">
           <div className="App">
             <header>
-              {/* <h1>Matchsida</h1>
-              <p>Se resultatet av en specifik matchup.</p> */}
             </header>
             <SpecificGame className="Games" />
           </div>
@@ -54,7 +51,6 @@ function App() {
         <Route path="/battle/:id1/:id2">
           <div className="App">
             <main>
-              {/* <h1>Battlesida</h1> */}
               <Battle
                 hamster1={hamster1} setHamster1={setHamster1}
                 hamster2={hamster2} setHamster2={setHamster2} />
@@ -64,7 +60,6 @@ function App() {
         <Route path="/battle">
           <div className="App">
             <main>
-              {/* <h1>Battlesida</h1> */}
               <Battle
                 hamster1={hamster1} setHamster1={setHamster1}
                 hamster2={hamster2} setHamster2={setHamster2} />
